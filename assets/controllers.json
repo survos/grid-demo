@@ -1,0 +1,15 @@
+{
+    "controllers": {
+        "@survos/datatables-bundle": {
+            "datatables": {
+                "enabled": true,
+                "fetch": "lazy"
+            },
+            "api_datatables": {
+                "enabled": true,
+                "fetch": "lazy"
+            }
+        }
+    },
+    "entrypoints": []
+}

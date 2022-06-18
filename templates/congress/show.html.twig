@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Congress{% endblock %}
+
+{% block body %}
+    <h1>Congress</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ congress.id }}</td>
+            </tr>
+            <tr>
+                <th>FirstName</th>
+                <td>{{ congress.firstName }}</td>
+            </tr>
+            <tr>
+                <th>LastName</th>
+                <td>{{ congress.lastName }}</td>
+            </tr>
+            <tr>
+                <th>OfficialName</th>
+                <td>{{ congress.officialName }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    {{ dump(congress.data) }}
+
+    <a href="{{ path('app_congress_index') }}">back to list</a>
+
+    <a href="{{ path('app_congress_edit', {'id': congress.id}) }}">edit</a>
+
+    {{ include('congress/_delete_form.html.twig') }}
+{% endblock %}
