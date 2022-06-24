@@ -114,8 +114,8 @@
     "survos/core-bundle": {
         "version": "1.0.7"
     },
-    "survos/datatables-bundle": {
-        "version": "1.0"
+    "survos/grid-bundle": {
+        "version": "dev-main"
     },
     "survos/maker-bundle": {
         "version": "1.0"

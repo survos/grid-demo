@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3e986ef6ac576440b6067d58b65c5d76",
+    "content-hash": "3e86125000d0602c2e5b349e67cbb534",
     "packages": [
         {
             "name": "api-platform/core",
@@ -1486,16 +1486,16 @@
         },
         {
             "name": "doctrine/sql-formatter",
-            "version": "1.1.2",
+            "version": "1.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/sql-formatter.git",
-                "reference": "20c39c2de286a9d3262cc8ed282a4ae60e265894"
+                "reference": "25a06c7bf4c6b8218f47928654252863ffc890a5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/sql-formatter/zipball/20c39c2de286a9d3262cc8ed282a4ae60e265894",
-                "reference": "20c39c2de286a9d3262cc8ed282a4ae60e265894",
+                "url": "https://api.github.com/repos/doctrine/sql-formatter/zipball/25a06c7bf4c6b8218f47928654252863ffc890a5",
+                "reference": "25a06c7bf4c6b8218f47928654252863ffc890a5",
                 "shasum": ""
             },
             "require": {
@@ -1521,7 +1521,7 @@
                 {
                     "name": "Jeremy Dorn",
                     "email": "jeremy@jeremydorn.com",
-                    "homepage": "http://jeremydorn.com/"
+                    "homepage": "https://jeremydorn.com/"
                 }
             ],
             "description": "a PHP SQL highlighting library",
@@ -1532,22 +1532,22 @@
             ],
             "support": {
                 "issues": "https://github.com/doctrine/sql-formatter/issues",
-                "source": "https://github.com/doctrine/sql-formatter/tree/1.1.2"
+                "source": "https://github.com/doctrine/sql-formatter/tree/1.1.3"
             },
-            "time": "2021-11-05T11:11:14+00:00"
+            "time": "2022-05-23T21:33:49+00:00"
         },
         {
             "name": "egulias/email-validator",
-            "version": "3.2",
+            "version": "3.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/egulias/EmailValidator.git",
-                "reference": "a5ed8d58ed0c340a7c2109f587951b1c84cf6286"
+                "reference": "f88dcf4b14af14a98ad96b14b2b317969eab6715"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/egulias/EmailValidator/zipball/a5ed8d58ed0c340a7c2109f587951b1c84cf6286",
-                "reference": "a5ed8d58ed0c340a7c2109f587951b1c84cf6286",
+                "url": "https://api.github.com/repos/egulias/EmailValidator/zipball/f88dcf4b14af14a98ad96b14b2b317969eab6715",
+                "reference": "f88dcf4b14af14a98ad96b14b2b317969eab6715",
                 "shasum": ""
             },
             "require": {
@@ -1594,7 +1594,7 @@
             ],
             "support": {
                 "issues": "https://github.com/egulias/EmailValidator/issues",
-                "source": "https://github.com/egulias/EmailValidator/tree/3.2"
+                "source": "https://github.com/egulias/EmailValidator/tree/3.2.1"
             },
             "funding": [
                 {
@@ -1602,7 +1602,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-05-28T22:19:18+00:00"
+            "time": "2022-06-18T20:57:19+00:00"
         },
         {
             "name": "fig/link-util",
@@ -2637,15 +2637,16 @@
             "time": "2022-06-16T10:56:44+00:00"
         },
         {
-            "name": "survos/datatables-bundle",
+            "name": "survos/grid-bundle",
             "version": "dev-main",
             "dist": {
                 "type": "path",
-                "url": "//home/tac/survos/bundles/datatables-bundle",
-                "reference": "6706fe94bbf53975eee87afda9deddecafbfb1d9"
+                "url": "//home/tac/survos/bundles/grid-bundle",
+                "reference": "6d44e51a0f54ef9838d5f2935c961562a9bc3084"
             },
             "require": {
                 "api-platform/core": "^2.6",
+                "doctrine/doctrine-bundle": "^2.7",
                 "doctrine/orm": "^2.12",
                 "doctrine/persistence": "^2.0 || ^3.0",
                 "friendsofsymfony/jsrouting-bundle": "^3.1",
@@ -2653,6 +2654,7 @@
                 "symfony/config": "^6.1",
                 "symfony/dependency-injection": "^6.1",
                 "symfony/http-kernel": "^6.1",
+                "symfony/options-resolver": "^6.1",
                 "symfony/ux-twig-component": "^2.2",
                 "twig/twig": "^2 || ^3.4"
             },
@@ -2668,8 +2670,13 @@
             "type": "symfony-bundle",
             "autoload": {
                 "psr-4": {
-                    "Survos\\Datatables\\": "src/"
+                    "Survos\\Grid\\": "src/"
                 }
+            },
+            "scripts": {
+                "phpstan": [
+                    "vendor/bin/phpstan analyse"
+                ]
             },
             "license": [
                 "MIT"
@@ -8992,16 +8999,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "9.5.20",
+            "version": "9.5.21",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "12bc8879fb65aef2138b26fc633cb1e3620cffba"
+                "reference": "0e32b76be457de00e83213528f6bb37e2a38fcb1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/12bc8879fb65aef2138b26fc633cb1e3620cffba",
-                "reference": "12bc8879fb65aef2138b26fc633cb1e3620cffba",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/0e32b76be457de00e83213528f6bb37e2a38fcb1",
+                "reference": "0e32b76be457de00e83213528f6bb37e2a38fcb1",
                 "shasum": ""
             },
             "require": {
@@ -9035,7 +9042,6 @@
                 "sebastian/version": "^3.0.2"
             },
             "require-dev": {
-                "ext-pdo": "*",
                 "phpspec/prophecy-phpunit": "^2.0.1"
             },
             "suggest": {
@@ -9079,7 +9085,7 @@
             ],
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
-                "source": "https://github.com/sebastianbergmann/phpunit/tree/9.5.20"
+                "source": "https://github.com/sebastianbergmann/phpunit/tree/9.5.21"
             },
             "funding": [
                 {
@@ -9091,7 +9097,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-04-01T12:37:26+00:00"
+            "time": "2022-06-19T12:14:25+00:00"
         },
         {
             "name": "sebastian/cli-parser",
@@ -10063,12 +10069,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/survos/SurvosMakerBundle.git",
-                "reference": "9a402209d1a1021527642270580358a7a074573e"
+                "reference": "9cf6e82acae8b7fa9b669735b35586da955ab94f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/survos/SurvosMakerBundle/zipball/9a402209d1a1021527642270580358a7a074573e",
-                "reference": "9a402209d1a1021527642270580358a7a074573e",
+                "url": "https://api.github.com/repos/survos/SurvosMakerBundle/zipball/9cf6e82acae8b7fa9b669735b35586da955ab94f",
+                "reference": "9cf6e82acae8b7fa9b669735b35586da955ab94f",
                 "shasum": ""
             },
             "require": {
@@ -10084,6 +10090,7 @@
             "require-dev": {
                 "doctrine/doctrine-bundle": "^2.0",
                 "doctrine/orm": "^2.3",
+                "haydenpierce/class-finder": "^0.4.3",
                 "phpstan/phpstan": "^1.4",
                 "sensio/framework-extra-bundle": "^6.2",
                 "symfony/form": ">= 6.0",
@@ -10132,7 +10139,7 @@
                 "issues": "https://github.com/survos/SurvosMakerBundle/issues",
                 "source": "https://github.com/survos/SurvosMakerBundle/tree/1.0"
             },
-            "time": "2022-06-07T09:44:21+00:00"
+            "time": "2022-06-08T17:34:08+00:00"
         },
         {
             "name": "symfony/browser-kit",
@@ -10808,7 +10815,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "survos/datatables-bundle": 20
+        "survos/grid-bundle": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,

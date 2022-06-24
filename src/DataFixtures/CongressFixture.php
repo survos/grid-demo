@@ -25,12 +25,9 @@ class CongressFixture extends Fixture
         foreach (json_decode($json) as $record) {
             $name = $record->name;
             $bio = $record->bio;
-//            $name = (object)$record['name'];
-//            $bio = (object)$record['bio'];
             $official = (new Official())
                 ->setBirthday(new \DateTimeImmutable($bio->birthday))
                 ->setGender($bio->gender)
-                ->setData($record)
                 ->setFirstName($name->first)
                 ->setLastName($name->last)
                 ->setOfficialName($name->official_full ?? "$name->first $name->last");

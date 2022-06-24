@@ -1,11 +1,11 @@
 {
     "controllers": {
-        "@survos/datatables-bundle": {
-            "datatables": {
+        "@survos/grid-bundle": {
+            "grid": {
                 "enabled": true,
                 "fetch": "lazy"
             },
-            "api_datatables": {
+            "api_grid": {
                 "enabled": true,
                 "fetch": "lazy"
             }

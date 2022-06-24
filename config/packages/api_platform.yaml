@@ -5,3 +5,11 @@ api_platform:
         json: ['application/merge-patch+json']
     swagger:
         versions: [3]
+    defaults:
+        pagination_enabled: true
+        pagination_client_enabled: false
+        # To allow partial pagination for all resource collections.
+        # This improves performances by skipping the `COUNT` query.
+        pagination_partial: false
+        pagination_items_per_page: 40
+        pagination_client_items_per_page: true

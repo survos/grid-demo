@@ -1,7 +1,7 @@
 {
     "devDependencies": {
         "@hotwired/stimulus": "^3.0.0",
-        "@survos/datatables-bundle": "file:vendor/survos/datatables-bundle/assets",
+        "@survos/grid-bundle": "file:vendor/survos/grid-bundle/assets",
         "@symfony/stimulus-bridge": "^3.0.0",
         "@symfony/webpack-encore": "^2.0.0",
         "core-js": "^3.0.0",
