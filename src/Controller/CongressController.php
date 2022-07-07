@@ -69,7 +69,7 @@ class CongressController extends AbstractController
     #[Route('/{id}', name: 'app_congress_delete', methods: ['POST'])]
     public function delete(Request $request, Official $official, OfficialRepository $officialRepository): Response
     {
-        if ($this->isCsrfTokenValid('delete'.$official->getId(), $request->request->get('_token'))) {
+        if ($this->isCsrfTokenValid('delete' . $official->getId(), $request->request->get('_token'))) {
             $officialRepository->remove($official, true);
         }
 

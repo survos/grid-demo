@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a99faba2a938a5cda4a8393bf9bdd2d0",
+    "content-hash": "156735a4a8f4f312070eb3ab4bd8e179",
     "packages": [
         {
             "name": "api-platform/core",
@@ -7978,6 +7978,90 @@
             "time": "2022-07-06T13:36:43+00:00"
         },
         {
+            "name": "symfony/workflow",
+            "version": "v6.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/workflow.git",
+                "reference": "644bcbe6a123e065210c017e93b4cd5d44ead66b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/workflow/zipball/644bcbe6a123e065210c017e93b4cd5d44ead66b",
+                "reference": "644bcbe6a123e065210c017e93b4cd5d44ead66b",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.1"
+            },
+            "conflict": {
+                "symfony/event-dispatcher": "<5.4"
+            },
+            "require-dev": {
+                "psr/log": "^1|^2|^3",
+                "symfony/dependency-injection": "^5.4|^6.0",
+                "symfony/event-dispatcher": "^5.4|^6.0",
+                "symfony/expression-language": "^5.4|^6.0",
+                "symfony/security-core": "^5.4|^6.0",
+                "symfony/validator": "^5.4|^6.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Workflow\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Grégoire Pineau",
+                    "email": "lyrixx@lyrixx.info"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Provides tools for managing a workflow or finite state machine",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "petrinet",
+                "place",
+                "state",
+                "statemachine",
+                "transition",
+                "workflow"
+            ],
+            "support": {
+                "source": "https://github.com/symfony/workflow/tree/v6.1.1"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2022-05-31T17:22:23+00:00"
+        },
+        {
             "name": "symfony/yaml",
             "version": "v6.1.2",
             "source": {
@@ -10963,88 +11047,59 @@
             "time": "2022-06-12T09:53:37+00:00"
         },
         {
-            "name": "symfony/workflow",
-            "version": "v6.1.1",
+            "name": "symplify/easy-coding-standard",
+            "version": "11.0.8",
             "source": {
                 "type": "git",
-                "url": "https://github.com/symfony/workflow.git",
-                "reference": "644bcbe6a123e065210c017e93b4cd5d44ead66b"
+                "url": "https://github.com/symplify/easy-coding-standard.git",
+                "reference": "ee347cd02e2aea9f706fc3f67ea0fc19cc0ca606"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/workflow/zipball/644bcbe6a123e065210c017e93b4cd5d44ead66b",
-                "reference": "644bcbe6a123e065210c017e93b4cd5d44ead66b",
+                "url": "https://api.github.com/repos/symplify/easy-coding-standard/zipball/ee347cd02e2aea9f706fc3f67ea0fc19cc0ca606",
+                "reference": "ee347cd02e2aea9f706fc3f67ea0fc19cc0ca606",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.1"
+                "php": ">=7.2"
             },
             "conflict": {
-                "symfony/event-dispatcher": "<5.4"
+                "friendsofphp/php-cs-fixer": "<3.0",
+                "squizlabs/php_codesniffer": "<3.6"
             },
-            "require-dev": {
-                "psr/log": "^1|^2|^3",
-                "symfony/dependency-injection": "^5.4|^6.0",
-                "symfony/event-dispatcher": "^5.4|^6.0",
-                "symfony/expression-language": "^5.4|^6.0",
-                "symfony/security-core": "^5.4|^6.0",
-                "symfony/validator": "^5.4|^6.0"
-            },
+            "bin": [
+                "bin/ecs"
+            ],
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "10.3-dev"
+                }
+            },
             "autoload": {
-                "psr-4": {
-                    "Symfony\\Component\\Workflow\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
+                "files": [
+                    "bootstrap.php"
                 ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                },
-                {
-                    "name": "Grégoire Pineau",
-                    "email": "lyrixx@lyrixx.info"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Provides tools for managing a workflow or finite state machine",
-            "homepage": "https://symfony.com",
-            "keywords": [
-                "petrinet",
-                "place",
-                "state",
-                "statemachine",
-                "transition",
-                "workflow"
-            ],
+            "description": "Prefixed scoped version of ECS package",
             "support": {
-                "source": "https://github.com/symfony/workflow/tree/v6.1.1"
+                "source": "https://github.com/symplify/easy-coding-standard/tree/11.0.8"
             },
             "funding": [
                 {
-                    "url": "https://symfony.com/sponsor",
+                    "url": "https://www.paypal.me/rectorphp",
                     "type": "custom"
                 },
                 {
-                    "url": "https://github.com/fabpot",
+                    "url": "https://github.com/tomasvotruba",
                     "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                    "type": "tidelift"
                 }
             ],
-            "time": "2022-05-31T17:22:23+00:00"
+            "time": "2022-07-05T11:49:37+00:00"
         },
         {
             "name": "theseer/tokenizer",

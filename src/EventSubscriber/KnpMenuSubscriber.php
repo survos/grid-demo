@@ -19,29 +19,36 @@ class KnpMenuSubscriber implements EventSubscriberInterface
     // top of page content
     public function onKnpTopMenuEvent(KnpMenuEvent $event): void
     {
-
     }
+
     public function onNavbarMenuEvent(KnpMenuEvent $event): void
     {
         $menu = $event->getMenu();
         $menuService = $this->menuService;
 
-        $sub = $menuService->addMenuItem($menu, ['label' => 'TEST SUB']);
-        $menuService->addMenuItem($menu, ['route' => 'app_congress_index', 'label' => 'Congress']);
-        $menuService->addMenuItem($menu, ['route' => 'api_doc', 'label' => 'API']);
+        $sub = $menuService->addMenuItem($menu, [
+            'label' => 'TEST SUB',
+        ]);
+        $menuService->addMenuItem($menu, [
+            'route' => 'app_congress_index',
+            'label' => 'Congress',
+        ]);
+        $menuService->addMenuItem($menu, [
+            'route' => 'api_doc',
+            'label' => 'API',
+        ]);
 
         // could create a new menu for auth
         $menuService->addAuthMenu($menu);
 
 //        $this->authMenu();
-
-
     }
+
     public static function getSubscribedEvents(): array
     {
         return [
             KnpMenuEvent::PAGE_MENU_EVENT => 'onKnpTopMenuEvent',
-            KnpMenuEvent::NAVBAR_MENU_EVENT => 'onNavbarMenuEvent'
+            KnpMenuEvent::NAVBAR_MENU_EVENT => 'onNavbarMenuEvent',
             // KnpTopMenuEvent::class => 'onKnpTopMenuEvent',
         ];
     }
