@@ -8,11 +8,15 @@ use App\Entity\Term;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Persistence\ObjectManager;
 use Symfony\Component\Cache\CacheItem;
+use Symfony\Component\Validator\Validator\ValidatorInterface;
 use Symfony\Contracts\Cache\CacheInterface;
 
 class CongressFixture extends Fixture
 {
-    public function __construct(private CacheInterface $cache)
+    public function __construct(
+        private CacheInterface $cache,
+        private ValidatorInterface $validator,
+    )
     {
     }
 
@@ -42,6 +46,10 @@ class CongressFixture extends Fixture
                     ->setEndDate(new \DateTimeImmutable($t->end));
                 $manager->persist($term);
                 $official->addTerm($term);
+                $errors = $this->validator->validate($term);
+                if (count($errors)) {
+                    dd($errors);
+                }
             }
         }
         $manager->flush();

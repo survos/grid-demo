@@ -31,7 +31,7 @@ class Term
     #[ORM\Column(type: 'string', length: 2, nullable: true)]
     private $stateAbbreviation;
 
-    #[ORM\Column(type: 'string', length: 8, nullable: true)]
+    #[ORM\Column(type: 'string', length: 16, nullable: true)]
     private $party;
 
     #[ORM\Column(type: 'string', length: 8, nullable: true)]
