@@ -23,9 +23,4 @@ return [
     Survos\Grid\SurvosGridBundle::class => ['all' => true],
     Knp\Bundle\MenuBundle\KnpMenuBundle::class => ['all' => true],
     Survos\BootstrapBundle\SurvosBootstrapBundle::class => ['all' => true],
-    Umbrella\CoreBundle\UmbrellaCoreBundle::class => ['all' => true],
-    Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle::class => ['all' => true],
-    Umbrella\AdminBundle\UmbrellaAdminBundle::class => ['all' => true],
-    KnpU\OAuth2ClientBundle\KnpUOAuth2ClientBundle::class => ['all' => true],
-    Survos\BaseBundle\SurvosBaseBundle::class => ['all' => true],
 ];

@@ -76,18 +76,6 @@
     "knplabs/knp-menu-bundle": {
         "version": "v3.2.0"
     },
-    "knpuniversity/oauth2-client-bundle": {
-        "version": "2.10",
-        "recipe": {
-            "repo": "github.com/symfony/recipes-contrib",
-            "branch": "main",
-            "version": "1.20",
-            "ref": "1ff300d8c030f55c99219cc55050b97a695af3f6"
-        },
-        "files": [
-            "config/packages/knpu_oauth2_client.yaml"
-        ]
-    },
     "nelmio/cors-bundle": {
         "version": "2.2",
         "recipe": {
@@ -125,21 +113,6 @@
         "files": [
             "config/packages/sensio_framework_extra.yaml"
         ]
-    },
-    "stof/doctrine-extensions-bundle": {
-        "version": "1.7",
-        "recipe": {
-            "repo": "github.com/symfony/recipes-contrib",
-            "branch": "main",
-            "version": "1.2",
-            "ref": "e805aba9eff5372e2d149a9ff56566769e22819d"
-        },
-        "files": [
-            "config/packages/stof_doctrine_extensions.yaml"
-        ]
-    },
-    "survos/base-bundle": {
-        "version": "dev-master"
     },
     "survos/bootstrap-bundle": {
         "version": "dev-master"
@@ -404,11 +377,5 @@
     },
     "twig/extra-bundle": {
         "version": "v3.4.0"
-    },
-    "umbrella2/adminbundle": {
-        "version": "v6.1"
-    },
-    "umbrella2/corebundle": {
-        "version": "v6.1"
     }
 }
