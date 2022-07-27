@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3e93c5c1b8a04e24e52d55f8b9047846",
+    "content-hash": "08c64c149d1bf661b233bf606c8cb181",
     "packages": [
         {
             "name": "api-platform/core",
@@ -2845,16 +2845,16 @@
         },
         {
             "name": "survos/grid-bundle",
-            "version": "dev-main",
+            "version": "1.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/survos/SurvosGridBundle.git",
-                "reference": "5d73079e0a8913be0f17e8203d6d50a019ba1f69"
+                "reference": "ab2306a959e5cc70529bfdc01efdcd7ca3f8de23"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/survos/SurvosGridBundle/zipball/5d73079e0a8913be0f17e8203d6d50a019ba1f69",
-                "reference": "5d73079e0a8913be0f17e8203d6d50a019ba1f69",
+                "url": "https://api.github.com/repos/survos/SurvosGridBundle/zipball/ab2306a959e5cc70529bfdc01efdcd7ca3f8de23",
+                "reference": "ab2306a959e5cc70529bfdc01efdcd7ca3f8de23",
                 "shasum": ""
             },
             "require": {
@@ -2880,11 +2880,10 @@
                 "symfony/var-dumper": "^6.1",
                 "symfony/webpack-encore-bundle": "^1.11"
             },
-            "default-branch": true,
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "1.1-dev"
+                    "dev-master": "1.1-dev"
                 },
                 "symfony": {
                     "require": "^6.1"
@@ -2912,9 +2911,9 @@
             ],
             "support": {
                 "issues": "https://github.com/survos/SurvosGridBundle/issues",
-                "source": "https://github.com/survos/SurvosGridBundle/tree/main"
+                "source": "https://github.com/survos/SurvosGridBundle/tree/1.0.3"
             },
-            "time": "2022-07-27T18:26:43+00:00"
+            "time": "2022-07-27T12:26:47+00:00"
         },
         {
             "name": "symfony/asset",

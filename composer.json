@@ -19,7 +19,7 @@
         "sensio/framework-extra-bundle": "^6.1",
         "survos/bootstrap-bundle": "*@dev",
         "survos/core-bundle": "^1.0",
-        "survos/grid-bundle": "^1.1-dev",
+        "survos/grid-bundle": "*@dev",
         "symfony/asset": "^6.1",
         "symfony/console": "^6.1",
         "symfony/doctrine-messenger": "^6.1",
