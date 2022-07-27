@@ -26,14 +26,18 @@ class KnpMenuSubscriber implements EventSubscriberInterface
         $menu = $event->getMenu();
         $menuService = $this->menuService;
 
-        $sub = $menuService->addMenuItem($menu, [
-            'label' => 'TEST SUB',
-        ]);
         $menuService->addMenuItem($menu, [
             'route' => 'app_congress_index',
-            'label' => 'Congress',
+            'label' => 'Congress (HTML)',
         ]);
         $menuService->addMenuItem($menu, [
+            'route' => 'app_congress_browse',
+            'label' => 'Congress (API)',
+        ]);
+        $sub = $menuService->addMenuItem($menu, [
+            'label' => 'Admin',
+        ]);
+        $menuService->addMenuItem($sub, [
             'route' => 'api_doc',
             'label' => 'API',
         ]);

@@ -21,6 +21,14 @@ class CongressController extends AbstractController
         ]);
     }
 
+    #[Route('/browse', name: 'app_congress_browse', methods: ['GET'])]
+    public function browse(OfficialRepository $officialRepository): Response
+    {
+        return $this->render('congress/browse.html.twig', [
+            'officialClass' => Official::class,
+        ]);
+    }
+
     #[Route('/new', name: 'app_congress_new', methods: ['GET', 'POST'])]
     public function new(Request $request, OfficialRepository $officialRepository): Response
     {
@@ -40,7 +48,7 @@ class CongressController extends AbstractController
         ]);
     }
 
-    #[Route('/{id}', name: 'app_congress_show', methods: ['GET'])]
+    #[Route('/{id}', name: 'app_congress_show', methods: ['GET'], options: ['expose' => true])]
     public function show(Official $official): Response
     {
         return $this->render('congress/show.html.twig', [

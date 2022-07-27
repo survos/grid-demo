@@ -3,13 +3,14 @@
 {% block title %}Official index{% endblock %}
 
 {% block body %}
-    <h1>Official index </h1>
+    <h1>Official Browse </h1>
     <p>
-        This page uses the <code>grid</code> component, and generates HTML from the query.
+        This page uses the <code>api_grid</code> component, and the datatable's AJAX call using API Platform.
     </p>
 
-    {% component grid with {
-        data: officials,
+    {% component api_grid with {
+        class: 'App\\Entity\\Official',
+        caller: _self,
         columns: ['id', 'officialName']|merge(is_granted('ROLE_ADMIN')?['actions']:['birthday'])
     } %}
 
