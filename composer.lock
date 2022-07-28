@@ -2846,12 +2846,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/survos/SurvosGridBundle.git",
-                "reference": "553b824301960ef1a72e95e3c052eb12d8420016"
+                "reference": "4739d3da1d7016218061bb74277c8d1298969501"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/survos/SurvosGridBundle/zipball/553b824301960ef1a72e95e3c052eb12d8420016",
-                "reference": "553b824301960ef1a72e95e3c052eb12d8420016",
+                "url": "https://api.github.com/repos/survos/SurvosGridBundle/zipball/4739d3da1d7016218061bb74277c8d1298969501",
+                "reference": "4739d3da1d7016218061bb74277c8d1298969501",
                 "shasum": ""
             },
             "require": {
@@ -2911,7 +2911,7 @@
                 "issues": "https://github.com/survos/SurvosGridBundle/issues",
                 "source": "https://github.com/survos/SurvosGridBundle/tree/main"
             },
-            "time": "2022-07-28T09:27:15+00:00"
+            "time": "2022-07-28T09:33:47+00:00"
         },
         {
             "name": "symfony/asset",
