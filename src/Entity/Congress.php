@@ -15,7 +15,6 @@ use Doctrine\ORM\Mapping as ORM;
 use Survos\CoreBundle\Entity\RouteParametersInterface;
 use Survos\CoreBundle\Entity\RouteParametersTrait;
 
-#[ApiResource]
 #[ORM\Entity(repositoryClass: CongressRepository::class)]
 class Congress implements RouteParametersInterface
 {
