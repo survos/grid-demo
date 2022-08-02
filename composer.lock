@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ac640f291a9cdca84d59b5af85be5867",
+    "content-hash": "cb38c4ef0792370cacf64cf016988745",
     "packages": [
         {
             "name": "api-platform/core",
@@ -2843,10 +2843,16 @@
         {
             "name": "survos/grid-bundle",
             "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/survos/SurvosGridBundle.git",
+                "reference": "ed237171a19af97f6e3e92d8dabeb102a01d5bf3"
+            },
             "dist": {
-                "type": "path",
-                "url": "//home/tac/survos/bundles/grid-bundle",
-                "reference": "b89bf2db28fcd9a184080ee8e27f2173301ea003"
+                "type": "zip",
+                "url": "https://api.github.com/repos/survos/SurvosGridBundle/zipball/ed237171a19af97f6e3e92d8dabeb102a01d5bf3",
+                "reference": "ed237171a19af97f6e3e92d8dabeb102a01d5bf3",
+                "shasum": ""
             },
             "require": {
                 "api-platform/core": "^2.7 || ^3.0",
@@ -2873,6 +2879,7 @@
                 "symfony/var-dumper": "^6.1",
                 "symfony/webpack-encore-bundle": "^1.11"
             },
+            "default-branch": true,
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
@@ -2887,11 +2894,7 @@
                     "Survos\\Grid\\": "src/"
                 }
             },
-            "scripts": {
-                "phpstan": [
-                    "vendor/bin/phpstan analyse"
-                ]
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -2906,17 +2909,25 @@
                 "symfony-ux",
                 "symfony6"
             ],
-            "transport-options": {
-                "relative": false
-            }
+            "support": {
+                "issues": "https://github.com/survos/SurvosGridBundle/issues",
+                "source": "https://github.com/survos/SurvosGridBundle/tree/main"
+            },
+            "time": "2022-08-02T12:05:13+00:00"
         },
         {
             "name": "survos/inspection-bundle",
             "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/survos/SurvosInspectionBundle.git",
+                "reference": "ae619839141f29e3ba3744d84c8763afcc1658b4"
+            },
             "dist": {
-                "type": "path",
-                "url": "//home/tac/survos/bundles/inspection-bundle",
-                "reference": "5f7983b43484fecc8f399bbf797350b3f48265a7"
+                "type": "zip",
+                "url": "https://api.github.com/repos/survos/SurvosInspectionBundle/zipball/ae619839141f29e3ba3744d84c8763afcc1658b4",
+                "reference": "ae619839141f29e3ba3744d84c8763afcc1658b4",
+                "shasum": ""
             },
             "require": {
                 "api-platform/core": "^2.7||^3.0",
@@ -2929,6 +2940,7 @@
             "require-dev": {
                 "roave/security-advisories": "dev-latest"
             },
+            "default-branch": true,
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
@@ -2943,6 +2955,7 @@
                     "Survos\\InspectionBundle\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -2953,9 +2966,11 @@
                 }
             ],
             "description": "Inspects Doctrine entities with APIPlatform attributes",
-            "transport-options": {
-                "relative": false
-            }
+            "support": {
+                "issues": "https://github.com/survos/SurvosInspectionBundle/issues",
+                "source": "https://github.com/survos/SurvosInspectionBundle/tree/main"
+            },
+            "time": "2022-08-01T22:43:42+00:00"
         },
         {
             "name": "symfony/asset",

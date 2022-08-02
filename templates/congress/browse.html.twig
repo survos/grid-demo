@@ -13,7 +13,10 @@
     {% component api_grid with {
         class: class,
         caller: _self,
-        columns: ['id', 'officialName']|merge(is_granted('ROLE_ADMIN')?['actions']:['birthday'])
+        columns: ['id',
+            'firstName',
+            'lastName',
+            'officialName']|merge(is_granted('ROLE_ADMIN')?['actions']:['birthday'])
     } %}
 
         {% block officialName %}

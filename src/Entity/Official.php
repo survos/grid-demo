@@ -33,8 +33,7 @@ use Symfony\Component\Serializer\Annotation\Groups;
 #[ApiFilter(SearchFilter::class,
     properties: [
         'firstName' => 'exact',
-        'lastName' => 'partial',
-        'gender' => 'exact',
+        'lastName' => 'partial'
     ])]
 #[ApiFilter(RangeFilter::class, properties: ['birthday'])]
 #[ApiFilter(MultiFieldSearchFilter::class,
