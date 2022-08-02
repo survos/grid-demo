@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use ApiPlatform\Doctrine\Orm\Filter\OrderFilter;
+use ApiPlatform\Doctrine\Orm\Filter\RangeFilter;
 use ApiPlatform\Doctrine\Orm\Filter\SearchFilter;
 use ApiPlatform\Metadata\ApiFilter;
 use ApiPlatform\Metadata\ApiResource;
@@ -17,35 +18,56 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Survos\Grid\Api\Filter\MultiFieldSearchFilter;
+use Symfony\Component\Serializer\Annotation\Groups;
 
-#[ApiResource]
+#[ApiResource(
+    operations: [
+        new Get(),
+        new GetCollection()
+    ],
+    openapiContext: ["description" => 'Elected congressional officials', "example" => "Clinton, Hillary"],
+    normalizationContext: ['groups' => ['official.read', 'rp']])]
+
 #[ApiFilter(OrderFilter::class,
-    properties: ['firstName', 'lastName','birthday'], arguments: ['orderParameterName' => 'order'])]
+    properties: ['firstName', 'lastName','gender','birthDay'])]
 #[ApiFilter(SearchFilter::class,
-    properties: ['lastName' => 'exact', 'gender' => 'exact'])]
+    properties: [
+        'firstName' => 'exact',
+        'lastName' => 'partial',
+        'gender' => 'exact',
+    ])]
+#[ApiFilter(RangeFilter::class, properties: ['birthday'])]
 #[ApiFilter(MultiFieldSearchFilter::class,
-    properties: ["lastName"], arguments: ["searchParameterName" => "search"])]
+    properties: ["lastName", 'firstName'], arguments: ["searchParameterName" => "search"])]
+
 #[ORM\Entity(repositoryClass: OfficialRepository::class)]
 class Official
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column(type: 'integer')]
+    #[Groups(['official.read'])]
     private $id;
 
     #[ORM\Column(type: 'string', length: 16, nullable: true)]
+    #[Groups(['official.read'])]
     private $firstName;
 
     #[ORM\Column(type: 'string', length: 32)]
+    #[Groups(['official.read'])]
     private $lastName;
 
     #[ORM\Column(type: 'string', length: 48)]
+    #[Groups(['official.read'])]
     private $officialName;
 
     #[ORM\Column(type: 'date_immutable', nullable: true)]
+    #[Groups(['official.read'])]
     private $birthday;
 
     #[ORM\Column(type: 'string', length: 1, nullable: true)]
+    #[Groups(['official.read'])]
+    #[ApiFilter(SearchFilter::class, strategy: 'exact')]
     private $gender;
 
     #[ORM\OneToMany(mappedBy: 'offical', targetEntity: Term::class, orphanRemoval: true)]

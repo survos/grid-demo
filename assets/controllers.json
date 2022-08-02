@@ -7,7 +7,10 @@
             },
             "api_grid": {
                 "enabled": true,
-                "fetch": "lazy"
+                "fetch": "lazy",
+                "autoimport": {
+                    "datatables.net-searchbuilder-bs5/css/searchBuilder.bootstrap5.min.css": true
+                }
             }
         }
     },

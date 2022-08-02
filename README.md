@@ -1,12 +1,12 @@
-Demo for survos/datatables-bundle
+Demo for survos/grid-bundle
 
 ## Quick Start: Download and run
-git clone git@github.com:survos/datatables-demo
+git clone git@github.com:survos/grid-demo
 
 ## Recreate
 
 ```bash
-symfony new datatables-demo --webapp && cd datatables-demo
+symfony new grid-demo --webapp && cd grid-demo
 composer req api symfony/webpack-encore-bundle
 yarn install && yarn dev
 

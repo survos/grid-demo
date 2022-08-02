@@ -123,6 +123,9 @@
     "survos/grid-bundle": {
         "version": "dev-main"
     },
+    "survos/inspection-bundle": {
+        "version": "dev-main"
+    },
     "survos/maker-bundle": {
         "version": "1.0"
     },
