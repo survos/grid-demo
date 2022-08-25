@@ -24,7 +24,7 @@ class KnpMenuSubscriber implements EventSubscriberInterface
     public function onNavbarMenuEvent(KnpMenuEvent $event): void
     {
         $menu = $event->getMenu();
-        $menuService = $this->menuService;
+        $menuService = $this; // was $this->menuService;, but now everything is in the trait
 
         $menuService->addMenuItem($menu, [
             'route' => 'app_congress_index',
@@ -43,7 +43,7 @@ class KnpMenuSubscriber implements EventSubscriberInterface
         ]);
 
         // could create a new menu for auth
-        $menuService->addAuthMenu($menu);
+//        $menuService->addAuthMenu($menu);
 
 //        $this->authMenu();
     }
@@ -53,6 +53,7 @@ class KnpMenuSubscriber implements EventSubscriberInterface
         return [
             KnpMenuEvent::PAGE_MENU_EVENT => 'onKnpTopMenuEvent',
             KnpMenuEvent::NAVBAR_MENU_EVENT => 'onNavbarMenuEvent',
+            KnpMenuEvent::SIDEBAR_MENU_EVENT => 'onNavbarMenuEvent',
             // KnpTopMenuEvent::class => 'onKnpTopMenuEvent',
         ];
     }

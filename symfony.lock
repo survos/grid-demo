@@ -114,6 +114,9 @@
             "config/packages/sensio_framework_extra.yaml"
         ]
     },
+    "survos/api-grid-bundle": {
+        "version": "dev-main"
+    },
     "survos/bootstrap-bundle": {
         "version": "dev-master"
     },

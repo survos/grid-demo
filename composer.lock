@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "551a94610512136174743ed5bc01d11c",
+    "content-hash": "de6d25eca8c84cf951bb5a81ed53ccfd",
     "packages": [
         {
             "name": "api-platform/core",
@@ -2718,6 +2718,80 @@
                 "source": "https://github.com/sensiolabs/SensioFrameworkExtraBundle/tree/v6.2.6"
             },
             "time": "2022-01-14T11:51:13+00:00"
+        },
+        {
+            "name": "survos/api-grid-bundle",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "//home/tac/survos/bundles/api-grid-bundle",
+                "reference": "474b997199f19519c99333f1a151a2972d150885"
+            },
+            "require": {
+                "doctrine/doctrine-bundle": "^2.7",
+                "doctrine/orm": "^2.12",
+                "doctrine/persistence": "^2.0 || ^3.0",
+                "php": "^8.1",
+                "survos/grid-bundle": "^1.0",
+                "survos/inspection-bundle": "^1.1-dev",
+                "symfony/config": "^6.1",
+                "symfony/dependency-injection": "^6.1",
+                "symfony/http-kernel": "^6.1",
+                "symfony/options-resolver": "^6.1",
+                "symfony/ux-twig-component": "^2.3",
+                "twig/twig": "^2 || ^3.4"
+            },
+            "require-dev": {
+                "phpstan/phpstan": "^1.7",
+                "roave/security-advisories": "dev-latest",
+                "symfony/browser-kit": "^6.1",
+                "symfony/framework-bundle": "^6.1",
+                "symfony/phpunit-bridge": "^6.1",
+                "symfony/twig-bundle": "^6.1",
+                "symfony/var-dumper": "^6.1",
+                "symfony/webpack-encore-bundle": "^1.11"
+            },
+            "suggest": {
+                "api-platform/core": "For javascript-based grid rendering",
+                "friendsofsymfony/jsrouting-bundle": "use path() in javascript grid rendering",
+                "monolog/monolog": "Allows more advanced logging of the application flow"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "1.1-dev"
+                },
+                "symfony": {
+                    "require": "^6.1"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Survos\\ApiGrid\\": "src/"
+                }
+            },
+            "scripts": {
+                "phpstan": [
+                    "vendor/bin/phpstan analyse"
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Tac Tacelosky",
+                    "email": "tacman@gmail.com"
+                }
+            ],
+            "description": "incorporate DatatablesNet, using twig and stimulus, twig_component requires ^2.2",
+            "keywords": [
+                "symfony-ux",
+                "symfony6"
+            ],
+            "transport-options": {
+                "relative": false
+            }
         },
         {
             "name": "survos/bootstrap-bundle",
@@ -10502,16 +10576,10 @@
         {
             "name": "survos/maker-bundle",
             "version": "dev-main",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/survos/SurvosMakerBundle.git",
-                "reference": "fad9093a50466aef8ebad5d5b55011a6ea8d6d58"
-            },
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/survos/SurvosMakerBundle/zipball/fad9093a50466aef8ebad5d5b55011a6ea8d6d58",
-                "reference": "fad9093a50466aef8ebad5d5b55011a6ea8d6d58",
-                "shasum": ""
+                "type": "path",
+                "url": "//home/tac/survos/bundles/maker-bundle",
+                "reference": "fad9093a50466aef8ebad5d5b55011a6ea8d6d58"
             },
             "require": {
                 "php": ">= 8.0",
@@ -10542,7 +10610,6 @@
                 "symfony/validator": ">= 6.0",
                 "symfony/yaml": "^6.0"
             },
-            "default-branch": true,
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
@@ -10559,7 +10626,20 @@
                     "Survos\\Bundle\\MakerBundle\\": "src"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "scripts": {
+                "test": [
+                    "vendor/bin/phpunit"
+                ],
+                "test-ci": [
+                    "vendor/bin/phpunit --coverage-text --coverage-clover=build/coverage.xml coverage"
+                ],
+                "test-coverage": [
+                    "php -d xdebug.mode=coverage vendor/bin/phpunit --coverage-html build/coverage"
+                ],
+                "test-phpstan": [
+                    "vendor/bin/phpstan analyse"
+                ]
+            },
             "license": [
                 "MIT"
             ],
@@ -10575,11 +10655,9 @@
                 "generator",
                 "symfony"
             ],
-            "support": {
-                "issues": "https://github.com/survos/SurvosMakerBundle/issues",
-                "source": "https://github.com/survos/SurvosMakerBundle/tree/main"
-            },
-            "time": "2022-07-27T21:26:28+00:00"
+            "transport-options": {
+                "relative": false
+            }
         },
         {
             "name": "symfony/browser-kit",
@@ -11226,8 +11304,9 @@
         }
     ],
     "aliases": [],
-    "minimum-stability": "beta",
+    "minimum-stability": "dev",
     "stability-flags": {
+        "survos/api-grid-bundle": 20,
         "survos/bootstrap-bundle": 20,
         "survos/grid-bundle": 20,
         "survos/inspection-bundle": 20,
