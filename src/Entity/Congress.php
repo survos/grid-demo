@@ -113,4 +113,9 @@ class Congress implements RouteParametersInterface
         $this->gender = $gender;
         return $this;
     }
+
+    public function getUniqueIdentifiers(): array
+    {
+        return ['congressId' => $this->getId()];
+    }
 }

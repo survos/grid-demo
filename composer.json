@@ -4,7 +4,7 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
-        "php": ">=8.1",
+        "php": "^8.1",
         "ext-ctype": "*",
         "ext-iconv": "*",
         "api-platform/core": "^3.0",
@@ -19,9 +19,9 @@
         "sensio/framework-extra-bundle": "^6.1",
         "survos/api-grid-bundle": "*@dev",
         "survos/bootstrap-bundle": "*@dev",
-        "survos/core-bundle": "^1.0",
-        "survos/grid-bundle": "^1.1-dev",
-        "survos/inspection-bundle": "^1.1-dev",
+        "survos/core-bundle": "^1.2",
+        "survos/grid-bundle": "^1.2",
+        "survos/inspection-bundle": "^1.2",
         "symfony/asset": "^6.1",
         "symfony/console": "^6.1",
         "symfony/doctrine-messenger": "^6.1",
@@ -110,7 +110,7 @@
     "require-dev": {
         "doctrine/doctrine-fixtures-bundle": "^3.4",
         "phpunit/phpunit": "^9.5",
-        "survos/maker-bundle": "*@dev",
+        "survos/maker-bundle": "^1.2",
         "symfony/browser-kit": "^6.1",
         "symfony/css-selector": "^6.1",
         "symfony/debug-bundle": "^6.1",
@@ -121,17 +121,5 @@
         "symplify/easy-coding-standard": "^11.0"
     },
     "repositories": {
-        "api-grid": {
-            "type": "path",
-            "url": "//home/tac/survos/bundles/api-grid-bundle"
-        },
-        "maker": {
-            "type": "path",
-            "url": "//home/tac/survos/bundles/maker-bundle"
-        },
-        "survos_bootstrap_bundle": {
-            "type": "vcs",
-            "url": "git@github.com:survos/BootstrapBundle.git"
-        }
     }
 }

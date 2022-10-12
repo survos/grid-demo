@@ -17,7 +17,7 @@ use App\Repository\OfficialRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
-use Survos\Grid\Api\Filter\MultiFieldSearchFilter;
+use Survos\ApiGrid\Api\Filter\MultiFieldSearchFilter;
 use Symfony\Component\Serializer\Annotation\Groups;
 
 #[ApiResource(
