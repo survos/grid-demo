@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "528113dc8c931326eb43901b41666a8e",
+    "content-hash": "1de10438e8749651d976c3464ee42544",
     "packages": [
         {
             "name": "api-platform/core",
@@ -12104,7 +12104,10 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "survos/api-grid-bundle": 20,
+        "survos/bootstrap-bundle": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
