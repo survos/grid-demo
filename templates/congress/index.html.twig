@@ -3,20 +3,28 @@
 {% block title %}Official index{% endblock %}
 
 {% block body %}
-    <h1>Official index </h1>
+    <h1>Elected Representatives </h1>
     <p>
-        This page uses the <code>grid</code> component, and generates HTML from the query.
+        This page uses the <code>grid</code> component, which is a wrapper for jquery-datatables
     </p>
 
     {% component grid with {
         data: officials,
-        columns: ['id', 'officialName']|merge(is_granted('ROLE_ADMIN')?['actions']:['birthday'])
+        columns: [
+            'id',
+            {name: 'actions', condition: is_granted('ROLE_ADMIN')},
+            'firstName',
+            'lastName',
+            'officialName',
+            'birthday',
+            'gender'
+        ]
     } %}
 
         {% block officialName %}
-        <a href="{{ path('app_congress_show', {'id': row.id}) }}">
-            {{ row.officialName }}
-        </a>
+            <a href="{{ path('app_congress_show', {'id': row.id}) }}">
+                {{ row.officialName }}
+            </a>
         {% endblock %}
 
         {% block birthday %}

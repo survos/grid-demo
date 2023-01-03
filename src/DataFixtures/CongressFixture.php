@@ -22,7 +22,7 @@ class CongressFixture extends Fixture
 
     public function load(ObjectManager $manager): void
     {
-        $url = 'https://theunitedstates.io/congress-legislators/legislators-current.json';
+        $url = 'https://theunitedstates.io/congress-legislators/legislators-current.json?';
         $json = $this->cache->get(md5($url), fn (CacheItem $cacheItem) => file_get_contents($url));
 
         foreach (json_decode($json) as $record) {
