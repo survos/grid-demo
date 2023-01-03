@@ -21,7 +21,6 @@ yarn add bootstrap @popperjs/core
 [Create The Entity Classes](01-create-entities.md)
 
 ```
-bin/console doctrine:migrations:migrate -n
 bin/console make:fixtures CongressFixtures
 See the Fixtures file.
 bin/console doctrine:fixtures:load -n 

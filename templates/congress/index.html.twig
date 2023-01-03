@@ -3,32 +3,20 @@
 {% block title %}Official index{% endblock %}
 
 {% block body %}
-    <h1>Elected Representatives </h1>
+    <h1>Official index </h1>
     <p>
-        This page uses the <code>grid</code> component, which is a wrapper for jquery-datatables
-        and uses an HTML table for data.  To load the data via AJAX, see
-        <a href="{{ path('app_congress_browse') }}" class="btn btn-primary">
-            api-grid
-        </a>
+        This page uses the <code>grid</code> component, and generates HTML from the query.
     </p>
 
     {% component grid with {
         data: officials,
-        columns: [
-            'id',
-            {name: 'actions', condition: is_granted('ROLE_ADMIN')},
-            'firstName',
-            'lastName',
-            'officialName',
-            'birthday',
-            'gender'
-        ]
+        columns: ['id', 'officialName']|merge(is_granted('ROLE_ADMIN')?['actions']:['birthday'])
     } %}
 
         {% block officialName %}
-            <a href="{{ path('app_congress_show', {'id': row.id}) }}">
-                {{ row.officialName }}
-            </a>
+        <a href="{{ path('app_congress_show', {'id': row.id}) }}">
+            {{ row.officialName }}
+        </a>
         {% endblock %}
 
         {% block birthday %}
