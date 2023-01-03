@@ -21,6 +21,9 @@
     },
     "dependencies": {
         "@popperjs/core": "^2.11.5",
-        "bootstrap": "^5.2.0"
+        "bootstrap": "^5.2.0",
+        "datatables.net-responsive": "^2.4.0",
+        "datatables.net-responsive-bs5": "^2.4.0",
+        "datatables.net-responsive-dt": "^2.4.0"
     }
 }
